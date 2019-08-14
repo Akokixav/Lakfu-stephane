@@ -1,0 +1,106 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "lakfu-lakfuuu-20190813201417-authRole",
+            "UnauthRoleArn": "arn:aws:iam::289786021456:role/lakfu-lakfuuu-20190813201417-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::289786021456:role/lakfu-lakfuuu-20190813201417-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "lakfu-lakfuuu-20190813201417-deployment",
+            "UnauthRoleName": "lakfu-lakfuuu-20190813201417-unauthRole",
+            "StackName": "lakfu-lakfuuu-20190813201417",
+            "StackId": "arn:aws:cloudformation:us-east-2:289786021456:stack/lakfu-lakfuuu-20190813201417/9a4fbf20-be41-11e9-ba3f-02dbe31f622a"
+        }
+    },
+    "function": {
+        "users": {
+            "service": "Lambda",
+            "providerPlugin": "awscloudformation",
+            "build": true,
+            "dependsOn": [],
+            "lastBuildTimeStamp": "2019-08-14T03:15:42.979Z",
+            "lastPackageTimeStamp": "2019-08-14T03:15:46.780Z",
+            "distZipFilename": "users-4d6d3266793754787a6e-build.zip",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/lakfu-lakfuuu-20190813201417-deployment/amplify-cfn-templates/function/users-cloudformation-template.json",
+                "logicalId": "functionusers"
+            },
+            "lastPushTimeStamp": "2019-08-14T03:15:53.330Z"
+        },
+        "companies": {
+            "service": "Lambda",
+            "providerPlugin": "awscloudformation",
+            "build": true,
+            "dependsOn": [],
+            "lastBuildTimeStamp": "2019-08-14T03:15:44.406Z",
+            "lastPackageTimeStamp": "2019-08-14T03:15:46.940Z",
+            "distZipFilename": "companies-6359742f557749356463-build.zip",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/lakfu-lakfuuu-20190813201417-deployment/amplify-cfn-templates/function/companies-cloudformation-template.json",
+                "logicalId": "functioncompanies"
+            },
+            "lastPushTimeStamp": "2019-08-14T03:15:53.327Z"
+        }
+    },
+    "auth": {
+        "cognito3bbe796b": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/lakfu-lakfuuu-20190813201417-deployment/amplify-cfn-templates/auth/cognito3bbe796b-cloudformation-template.yml",
+                "logicalId": "authcognito3bbe796b"
+            },
+            "lastPushTimeStamp": "2019-08-14T03:15:53.460Z"
+        }
+    },
+    "api": {
+        "api9bbccbef": {
+            "service": "API Gateway",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [
+                {
+                    "category": "function",
+                    "resourceName": "users",
+                    "attributes": [
+                        "Name",
+                        "Arn"
+                    ]
+                },
+                {
+                    "category": "function",
+                    "resourceName": "companies",
+                    "attributes": [
+                        "Name",
+                        "Arn"
+                    ]
+                }
+            ],
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/lakfu-lakfuuu-20190813201417-deployment/amplify-cfn-templates/api/api9bbccbef-cloudformation-template.json",
+                "logicalId": "apiapi9bbccbef"
+            },
+            "lastPushTimeStamp": "2019-08-14T03:15:53.776Z"
+        }
+    },
+    "analytics": {
+        "lakfu": {
+            "service": "Pinpoint",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/lakfu-lakfuuu-20190813201417-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+                "logicalId": "analyticslakfu"
+            },
+            "lastPushTimeStamp": "2019-08-14T03:15:53.647Z"
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "service": "S3AndCloudFront",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/lakfu-lakfuuu-20190813201417-deployment/amplify-cfn-templates/hosting/template.json",
+                "logicalId": "hostingS3AndCloudFront"
+            },
+            "lastPushTimeStamp": "2019-08-14T03:15:53.430Z"
+        }
+    }
+}

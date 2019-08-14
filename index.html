@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <!-- Meta stuff -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta author="Generation Z Capital Group">
+        <meta description="Turn your busines dreams into business realities.">
+<title>Lakfu</title>
+  
+<!-- styling -->
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Architects+Daughter|Roboto&subset=latin,devanagari'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="./style.css">
+
+<!-- Image sizes begin -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="./img/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="./img/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./img/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./img/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./img/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./img/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./img/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./img/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="./img/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./img/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png">
+
+<!-- Manifest -->
+<link rel="manifest" href="./manifest.json">
+
+  
+</head>
+
+<body>
+
+  <body class="welcome">
+  <span id="splash-overlay" class="splash"></span>
+  <span id="welcome" class="z-depth-4"></span>
+ 
+  <header class="navbar-fixed"> 
+    <nav class="row deep-orange darken-1">
+      <div class="col s12">
+        <ul class="right">
+         
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="valign-wrapper">
+    <span class="container grey-text text-lighten-1 ">
+
+      <p class="flow-text">Welcome to</p>
+      <h1 class="title grey-text text-lighten-3">Lakfu</h1>
+
+      <blockquote class="flow-text">Business ideas into business realities</blockquote>
+
+      <div class="center-align">
+        <!-- BUTTON Trigger -->
+        <a class="btn btn-primary " href="investorlogin\dist\investorlogin.html" data-activates="exams">Investor Login</a>
+
+        
+        <!-- BUTTON Trigger -->
+        <a class="btn btn-primary" href="entrepreneurlogin\dist\entrepreneurlogin.html" data-activates="study">Entreprenur Login</a>
+
+       
+
+    </span>
+  </main>
+
+  
+  <footer class="page-footer deep-orange">
+    <div class="footer-copyright deep-orange">
+      <div class="container">
+        <p>&copy; 2019 Lakfu is a subsidary of Generation Z Capital Group. All rights reserved.</p>
+        
+    </div>
+  </footer>
+</body>
+
+<!-- Scripting time -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js'></script>
+
+<script type="text/javascript"defer>
+
+// This is the "Offline page" service worker DO NOT TOUCH
+
+// Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+// Check compatibility for the browser we're running this in
+if ("serviceWorker" in navigator) {
+  if (navigator.serviceWorker.controller) {
+    console.log("Lakfu active service worker found, no need to register");
+  } else {
+    // Register the service worker
+    navigator.serviceWorker
+      .register("serviceworker.js", {
+        scope: "./"
+      })
+      .then(function (reg) {
+        console.log("Lakfu service worker has been registered for scope: " + reg.scope);
+      });
+  }
+}
+
+</script> 
+
+<!-- Minifyied service worker file -->
+<script type="text/javascript" src="./serviceworker.js" defer></script>
+</body>
+</html>

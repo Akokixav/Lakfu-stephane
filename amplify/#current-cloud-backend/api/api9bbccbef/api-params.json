@@ -1,0 +1,54 @@
+{
+    "paths": [
+        {
+            "name": "/users",
+            "lambdaFunction": "users",
+            "privacy": {
+                "private": true,
+                "auth": "rw"
+            }
+        },
+        {
+            "name": "/companies",
+            "lambdaFunction": "companies",
+            "privacy": {
+                "private": true,
+                "auth": "rw"
+            }
+        }
+    ],
+    "resourceName": "api9bbccbef",
+    "apiName": "api9bbccbef",
+    "functionArns": [
+        {
+            "lambdaFunction": "users"
+        },
+        {
+            "lambdaFunction": "companies"
+        }
+    ],
+    "privacy": {
+        "auth": 2,
+        "unauth": 0,
+        "authRoleName": "lakfu-20190705165342-authRole",
+        "unAuthRoleName": "lakfu-20190705165342-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "users",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "companies",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

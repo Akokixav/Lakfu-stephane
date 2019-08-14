@@ -1,0 +1,40 @@
+{
+    "lakfu": {
+        "awscloudformation": {
+            "AuthRoleName": "lakfu-20190705165342-authRole",
+            "UnauthRoleArn": "arn:aws:iam::695960104665:role/lakfu-20190705165342-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::695960104665:role/lakfu-20190705165342-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "lakfu-20190705165342-deployment",
+            "UnauthRoleName": "lakfu-20190705165342-unauthRole",
+            "StackName": "lakfu-20190705165342",
+            "StackId": "arn:aws:cloudformation:us-west-2:695960104665:stack/lakfu-20190705165342/1e8bcee0-9f80-11e9-b631-0a33685a019e"
+        },
+        "categories": {
+            "auth": {
+                "cognito3bbe796b": {}
+            }
+        }
+    },
+    "lakfuuu": {
+        "awscloudformation": {
+            "AuthRoleName": "lakfu-lakfuuu-20190813201417-authRole",
+            "UnauthRoleArn": "arn:aws:iam::289786021456:role/lakfu-lakfuuu-20190813201417-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::289786021456:role/lakfu-lakfuuu-20190813201417-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "lakfu-lakfuuu-20190813201417-deployment",
+            "UnauthRoleName": "lakfu-lakfuuu-20190813201417-unauthRole",
+            "StackName": "lakfu-lakfuuu-20190813201417",
+            "StackId": "arn:aws:cloudformation:us-east-2:289786021456:stack/lakfu-lakfuuu-20190813201417/9a4fbf20-be41-11e9-ba3f-02dbe31f622a"
+        },
+        "categories": {
+            "auth": {
+                "cognito3bbe796b": {}
+            },
+            "function": {
+                "users": {},
+                "companies": {}
+            }
+        }
+    }
+}

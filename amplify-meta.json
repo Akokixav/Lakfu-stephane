@@ -1,0 +1,53 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "reactweb-20190502151319-authRole",
+			"UnauthRoleArn": "arn:aws:iam::878435980219:role/reactweb-20190502151319-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::878435980219:role/reactweb-20190502151319-authRole",
+			"Region": "us-west-2",
+			"DeploymentBucketName": "reactweb-20190502151319-deployment",
+			"UnauthRoleName": "reactweb-20190502151319-unauthRole",
+			"StackName": "reactweb-20190502151319",
+			"StackId": "arn:aws:cloudformation:us-west-2:878435980219:stack/reactweb-20190502151319/7f1167b0-6d27-11e9-9e3f-026cca7a5b0a"
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/reactweb-20190502151319-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2019-05-02T22:19:08.831Z",
+			"output": {
+				"S3BucketSecureURL": "https://eacteb-20190502151512-hostingbucket-env.s3.amazonaws.com",
+				"WebsiteURL": "http://eacteb-20190502151512-hostingbucket-env.s3-website-us-west-2.amazonaws.com",
+				"Region": "us-west-2",
+				"HostingBucketName": "eacteb-20190502151512-hostingbucket-env"
+			},
+			"lastPushDirHash": "HNU9R9U1HAH7Qmx0c0tjDDrk1KQ="
+		}
+	},
+	"auth": {
+		"cognito7f329e96": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/reactweb-20190502151319-deployment/amplify-cfn-templates/auth/cognito7f329e96-cloudformation-template.yml",
+				"logicalId": "authcognito7f329e96"
+			},
+			"lastPushTimeStamp": "2019-05-02T22:19:08.831Z",
+			"output": {
+				"AppClientSecret": "1pod3bv9hi5n96lplf6tgg1ejt5ujfkjkhvbjls3td90jenaeuaq",
+				"UserPoolId": "us-west-2_ttFheY0xP",
+				"AppClientIDWeb": "1k3eg4id5pp1nvqn73pgsdt3ps",
+				"AppClientID": "mrkevksfacamb1f3oktr4lf70",
+				"IdentityPoolId": "us-west-2:194daa60-c2ed-487e-82e5-3e5d95c0066f",
+				"IdentityPoolName": "cognito7f329e96_identitypool_7f329e96__env",
+				"UserPoolName": "cognito7f329e96_userpool_7f329e96"
+			},
+			"lastPushDirHash": "wM63+noscvuWvKMyu2/o7Mszp4Q="
+		}
+	}
+}

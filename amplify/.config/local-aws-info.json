@@ -1,0 +1,12 @@
+{
+    "lakfu": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "lakfu_muyuan"
+    },
+    "lakfuuu": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "default"
+    }
+}

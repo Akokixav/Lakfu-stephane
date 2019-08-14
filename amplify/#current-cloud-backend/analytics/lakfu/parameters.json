@@ -1,0 +1,20 @@
+{
+    "appName": "lakfu",
+    "roleName": "pinpointLambdaRole5c849406",
+    "cloudWatchPolicyName": "cloudWatchPolicy5c849406",
+    "pinpointPolicyName": "pinpointPolicy5c849406",
+    "authPolicyName": "pinpoint_amplify_5c849406",
+    "unauthPolicyName": "pinpoint_amplify_5c849406",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}
